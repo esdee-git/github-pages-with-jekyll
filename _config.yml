@@ -1,18 +1,41 @@
-title: here i am
-remote_theme: chesterhow/tale
-paginate:   5
+# Site settings
+title:          Tale
+description:    "Minimal Jekyll theme for storytellers"
+baseurl:        "/tale"
+url:            "https://chesterhow.github.io"
+
+# Google Analytics
+google_analytics: UA—XXXXXXXX-X
+
+# Author
+author:
+  name:         Chester How
+  url:          https://chester.how
+  email:        chesterhow@gmail.com
+
+# Build settings
+markdown:       kramdown
+include:
+  - _pages
+
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
+
+# Gems
 plugins:
+  - jekyll-feed
   - jekyll-paginate
-  - jekyll-remote-theme
-  
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  - jekyll-seo-tag
+  # - jemoji #Uncomment this to allow emoji in your post
 
-# social links
-twitter_username: your-twitter-handle # DO NOT include the @ character, or else the build will fail!
-github_username:  your-github-handle # DO NOT include the @ character, or else the build will fail!
+# Permalinks
+permalink:      /:year-:month-:day/:title
+paginate:       5
 
-show_excerpts: true # set to false to remove excerpts on the homepage
+# Excludes
+exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
 
+# Disqus (Set to your disqus id)
+disqus:         jekyll-tale
